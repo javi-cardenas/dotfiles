@@ -1,6 +1,7 @@
-font-family = "Geist Mono"
 theme = "Monokai Pro Machine"
-keybind = cmd+r=reload_config
+font-family = "Geist Mono"
 font-size = 18
+background-opacity = 0.8
+
+keybind = cmd+r=reload_config
 mouse-hide-while-typing = true
-background-opacity = 0.9
