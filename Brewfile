@@ -1,5 +1,3 @@
-tap "sst/tap"
-
 # GUIs
 cask "ghostty" # terminal emulator
 cask "raycast" # app search
