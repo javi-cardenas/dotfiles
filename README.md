@@ -1,6 +1,6 @@
 # Mac Setup
 
-This doc has been updated to work for macOS 15 Sequoia. This [repo](https://github.com/javi-cardenas/.dotfiles) contains a shell script, a Brewfile, and other config files. Run the shell script to automate the steps below.
+This doc has been updated to work for macOS 15 Sequoia. This [repo](https://github.com/javi-cardenas/.dotfiles) contains a shell script, a Brewfile, and other config files. Run the shell script to automate most steps below.
 
 ## Getting Started
 
@@ -40,3 +40,6 @@ brew bundle upgrade
 ```sh
 brew bundle dump # dump all dependencies into a Brewfile
 ```
+
+## Raycast
+Disable Apple's Spotlight and replace that hotkey with Raycast

@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# Error handling
+
 set -e # Exit on any error
+
+echo "🚀 Setting up your Mac..."
 
 # Installations
 
