@@ -30,6 +30,6 @@ brew analytics off || true
 
 # 3) Install apps and CLIs from Brewfile
 echo "🍺 Installing applications from Brewfile..."
-brew bundle install --file "$SCRIPT_DIR/Brewfile" --no-lock
+brew bundle install --file "$SCRIPT_DIR/Brewfile"
 
 echo "✅ Setup complete!"

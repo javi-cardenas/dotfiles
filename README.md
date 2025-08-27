@@ -1,15 +1,15 @@
 ## MacOS Setup with Dotfiles
 
-This doc has been updated to work for macOS 15 Sequoia. This [repo](https://github.com/javi-cardenas/.dotfiles) contains a shell script, a Brewfile, and other config files. Run the shell script to automate most steps below.
+This doc has been updated to work for macOS 15 Sequoia. This [repo](https://github.com/javi-cardenas/.dotfiles) contains a shell script, a Brewfile, and other config files. Run the following command to automate most steps below.
+
+```sh
+/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/javi-cardenas/dotfiles/main/install.sh)"
+```
 
 ## Getting Started
 
 - [Xcode CLI Tools](#xcode-cli-tools)
 - [Homebrew](#homebrew)
-
-```sh
-/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/YOUR_GH_USERNAME/dotfiles/main/install.sh)"
-```
 
 ## Xcode CLI Tools
 
