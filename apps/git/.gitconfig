@@ -1,0 +1,11 @@
+[user]
+  name   = Javi Cardenas
+  email  = javi@javicardenas.com
+[github]
+  user   = javi-cardenas
+[alias]
+  cm     = commit -m
+  s      = status
+  p      = push
+[push]
+	autoSetupRemote = true
