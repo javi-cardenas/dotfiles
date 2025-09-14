@@ -93,6 +93,9 @@ Keyboard brightness
 Key Repeat -> Fast
 Delay Until Repeat -> Short
 
+## Trackpad
+Tap to click
+
 ## Battery
 
 
@@ -110,3 +113,6 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 
 To get the Home folder in the finder, press CMD + SHIFT + H and drag the home folder to the sidebar.
+
+## Extra
+Turn on trash after 30 days

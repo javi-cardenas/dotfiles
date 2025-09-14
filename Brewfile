@@ -22,6 +22,7 @@ cask "spotify" # music
 cask "docker" # containerization
 cask "discord" # comms
 cask "slack" # comms
+cask "anki" # flashcards
 
 # CLIs
 ## Dev Tools
