@@ -8,24 +8,15 @@ This doc has been updated to work for macOS 15 Sequoia. This [repo](https://gith
 
 ## Getting Started
 
-- [Xcode CLI Tools](#xcode-cli-tools)
 - [Homebrew](#homebrew)
-
-## Xcode CLI Tools
-
-Install Xcode CLI Tools...
-
-```sh
-xcode-select --install
-```
+- Proton Suite
+- [Raycast]
+- Cursor
+- Ghostty
 
 ## Homebrew
 
 Install [Homebrew](https://brew.sh/)...
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
 
 ### Brewfile
 
@@ -45,7 +36,77 @@ brew bundle upgrade
 brew bundle dump # dump all dependencies into a Brewfile
 ```
 
+## Proton Suite
+- ProtonVPN
+- Proton Pass
+- Proton Mail
+- Proton Drive
+
 ## Raycast
 Disable Apple's Spotlight and replace that hotkey with Raycast
 
 ## Ghostyy
+
+
+## Git
+git config file
+
+### GitHub SSH
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-yo$
+
+## Cursor
+
+### ohmyzsh
+https://github.com/ohmyzsh/ohmyzsh/
+
+### Node Version Manager (nvm)
+https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating
+
+```sh
+nvm install --lts
+```
+
+# Mac Settings
+## Security
+Turn FileVault On (makes sure SSD is securely encrypted)
+Network > Firewall > On
+Sharing
+Change computer name
+Make sure all file sharing is disabled
+Notifications when the screen is locked > Off
+
+
+## Dock
+Automatically hide and show Dock
+Minimize windows into application icon
+Group windows by application
+
+## Widgets
+
+## Control Center
+Display the time in seconds
+Battery
+Focus mode
+
+## Keyboard
+Keyboard brightness
+Key Repeat -> Fast
+Delay Until Repeat -> Short
+
+## Battery
+
+
+## Finder
+# Show Library folder
+chflags nohidden ~/Library
+
+# Show hidden files
+defaults write com.apple.finder AppleShowAllFiles YES
+
+# Show path bar
+defaults write com.apple.finder ShowPathbar -bool true
+
+# Show status bar
+defaults write com.apple.finder ShowStatusBar -bool true
+
+To get the Home folder in the finder, press CMD + SHIFT + H and drag the home folder to the sidebar.

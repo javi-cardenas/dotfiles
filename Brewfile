@@ -16,19 +16,15 @@ vscode "github.github-vscode-theme"
 ## Other
 cask "brave-browser" # browser
 cask "google-chrome" # browser
+cask "zen" # browser
 cask "obsidian" # notes
 cask "spotify" # music
+cask "docker" # containerization
 cask "discord" # comms
+cask "slack" # comms
 
 # CLIs
 ## Dev Tools
-brew "neovim" #  Vim fork
-brew "gh" # GitHub CLI
-brew "stow" # Symlink manager for dotfiles
+brew "git" # git version control
 brew "pyenv" # Python version management
-brew "act" # run GitHub Actions locally
 brew "azure-cli" # Microsoft Azure CLI 2.0
-brew "zsh" # Z shell
-brew "zsh-completions" # Additional completion definitions for zsh
-brew "zsh-syntax-highlighting" # Fish shell-like syntax highlighting for zsh
-brew "zsh-autosuggestions" # Fish-like autosuggestions for zsh
