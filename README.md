@@ -115,11 +115,14 @@ Delay Uuntil repeat > Short
 Tap to click
 
 ## Finder
+
+Show the Library folder, hidden files, the path bar, and the status bar
+
 ```sh
-chflags nohidden ~/Library # show Library folder
-defaults write com.apple.finder AppleShowAllFiles YES # show hidden files
-defaults write com.apple.finder ShowPathbar -bool true # show path bar
-defaults write com.apple.finder ShowStatusBar -bool true # show status bar
+chflags nohidden ~/Library
+defaults write com.apple.finder AppleShowAllFiles YES
+defaults write com.apple.finder ShowPathbar -bool true
+defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
 To get the Home folder in the finder, press CMD + SHIFT + H and drag the home folder to the sidebar.
