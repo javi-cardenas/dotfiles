@@ -16,7 +16,26 @@ This doc has been updated to work for macOS 15 Sequoia. This [repo](https://gith
 
 ## Homebrew
 
-Install [Homebrew](https://brew.sh/)...
+Install [Homebrew](https://brew.sh/)
+
+Note: After installing, follow the instructions in your terminal to add Homebrew to your PATH...
+
+For later, use `brew update` to make sure everything is up-to-date.
+
+## Setup Git
+```sh
+touch ~/.gitconfig
+nano ~/.gitconfig
+```
+
+### [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub
+```
 
 ### Brewfile
 
