@@ -100,19 +100,25 @@ nvm install --lts
 - Mission Control > Group windows by application > On
 
 ## Control Center
-Other Modules > Battery > Show Percentage > On
-Menu Bar Only > Clock Options > Display the time with seconds > On
-Menu Bar Only > Spotlight > Don't Show in Menu Bar
+- Other Modules > Battery > Show Percentage > On
+- Menu Bar Only > Clock Options > Display the time with seconds > On
+- Menu Bar Only > Spotlight > Don't Show in Menu Bar
 
 ## Military Time
-General > Date & Time > 24-hour time & Lock Screen > On
+- General > Date & Time > 24-hour time & Lock Screen > On
 
 ## Keyboard
-Key repeat rate > Fast
-Delay Uuntil repeat > Short
+- Key repeat rate > Fast
+- Delay Uuntil repeat > Short
 
 ## Trackpad
-Tap to click
+- Tap to click
+
+## Automatically Empty Trash
+- General > Storage > Empty Trash automatically > On
+
+## Widgets
+- Remove all widgets
 
 ## Finder
 
@@ -125,14 +131,7 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
-To get the Home folder in the finder, press CMD + SHIFT + H and drag the home folder to the sidebar.
-
-## Extra
-Turn on trash after 30 days
-
-## Widgets
-- Remove all widgets
+To get the Home folder in the finder, press CMD + SHIFT + H and drag the home folder to the sidebar
 
 ### ohmyzsh
 https://github.com/ohmyzsh/ohmyzsh/
-
