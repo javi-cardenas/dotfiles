@@ -97,6 +97,7 @@ nvm install --lts
 ## Dock
 - Dock > Minimize windows into application icon > On
 - Dock > Automatically hide and show the Dock > On
+- Dock > Show suggested and recent apps in Dock > Off
 - Mission Control > Group windows by application > On
 
 ## Control Center
@@ -131,7 +132,9 @@ defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
 ```
 
-To get the Home folder in the finder, press CMD + SHIFT + H and drag the home folder to the sidebar
+To get to the Home directory in finder, press CMD + SHIFT + H and drag the home directory to the sidebar
+
+Create a Screenshots directory and make it the default for screenshots (CMD + SHIFT + 5 > Options > Other Location)
 
 ### ohmyzsh
 https://github.com/ohmyzsh/ohmyzsh/
