@@ -6,7 +6,7 @@ This doc has been updated to work for macOS 15 Sequoia. This [repo](https://gith
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/javi-cardenas/dotfiles/main/install.sh)"
 ```
 
-## Getting Started
+## Dev Setup
 
 - [Homebrew](#homebrew)
 - Proton Suite
@@ -70,31 +70,13 @@ Remove Spotlight search keyboard shortcut and make Command + Space the Raycast k
 
 System Settings > Keyboard > Keyboard Shortcuts > Spotlight > Uncheck "Show Spotlight search"
 
-## Configure Ghostty
-
-### TODO
-
 ## Configure Git
 
 ```sh
 touch ~/.gitconfig
 nano ~/.gitconfig
 ```
-
-
-## Proton Suite
-- ProtonVPN
-- Proton Pass
-- Proton Mail
-- Proton Drive
-
-### GitHub SSH
-https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-yo$
-
-## Cursor
-
-### ohmyzsh
-https://github.com/ohmyzsh/ohmyzsh/
+Copy and paste the .gitconfig contents here..
 
 ### Node Version Manager (nvm)
 https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating
@@ -103,40 +85,37 @@ https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating
 nvm install --lts
 ```
 
-# Mac Settings
-## Security
-Turn FileVault On (makes sure SSD is securely encrypted)
-Network > Firewall > On
-Sharing
-Change computer name
-Make sure all file sharing is disabled
-Notifications when the screen is locked > Off
-
+## Mac Settings
+### Security
+- Filevault: Privacy & Security > Filevault > Turn On (encrypts SSD)
+- Firewall: Network > Firewall > On
+- Search "Sharing"
+    - remove name from local hostname: Sharing > Local hostname > Edit
+    - make sure all file sharing is disabled
+- Notifications > Allow notifications when the screen is locked > Off
 
 ## Dock
-Automatically hide and show Dock
-Minimize windows into application icon
-Group windows by application
-
-## Widgets
+- Dock > Minimize windows into application icon > On
+- Dock > Automatically hide and show the Dock > On
+- Mission Control > Group windows by application > On
 
 ## Control Center
-Display the time in seconds
-Battery
-Focus mode
+Other Modules > Battery > Show Percentage > On
+Menu Bar Only > Clock Options > Display the time with seconds > On
+Menu Bar Only > Spotlight > Don't Show in Menu Bar
+
+## Military Time
+General > Date & Time > 24-hour time & Lock Screen > On
 
 ## Keyboard
-Keyboard brightness
-Key Repeat -> Fast
-Delay Until Repeat -> Short
+Key repeat rate > Fast
+Delay Uuntil repeat > Short
 
 ## Trackpad
 Tap to click
 
-## Battery
-
-
 ## Finder
+```sh
 # Show Library folder
 chflags nohidden ~/Library
 
@@ -148,8 +127,16 @@ defaults write com.apple.finder ShowPathbar -bool true
 
 # Show status bar
 defaults write com.apple.finder ShowStatusBar -bool true
+```
 
 To get the Home folder in the finder, press CMD + SHIFT + H and drag the home folder to the sidebar.
 
 ## Extra
 Turn on trash after 30 days
+
+## Widgets
+- Remove all widgets
+
+### ohmyzsh
+https://github.com/ohmyzsh/ohmyzsh/
+
