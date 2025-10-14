@@ -22,6 +22,13 @@ Note: After installing, follow the instructions in your terminal to add Homebrew
 
 For later, use `brew update` to make sure everything is up-to-date.
 
+## VPN and Password Manager
+```
+brew install --cask \
+protonvpn
+proton-pass
+```
+
 ## Setup Git
 ```sh
 touch ~/.gitconfig
