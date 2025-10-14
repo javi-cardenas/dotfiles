@@ -21,11 +21,8 @@ cask "obsidian" # notes
 cask "spotify" # music
 cask "docker" # containerization
 cask "discord" # comms
-cask "slack" # comms
 cask "anki" # flashcards
 
 # CLIs
 ## Dev Tools
 brew "git" # git version control
-brew "pyenv" # Python version management
-brew "azure-cli" # Microsoft Azure CLI 2.0

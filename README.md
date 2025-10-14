@@ -23,17 +23,13 @@ Note: After installing, follow the instructions in your terminal to add Homebrew
 For later, use `brew update` to make sure everything is up-to-date.
 
 ## VPN and Password Manager
-```
+```sh
 brew install --cask \
-protonvpn
+protonvpn \
 proton-pass
 ```
 
 ## Setup Git
-```sh
-touch ~/.gitconfig
-nano ~/.gitconfig
-```
 
 ### [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
@@ -42,6 +38,10 @@ ssh-keygen -t ed25519 -C "85462046+javi-cardenas@users.noreply.github.com"
 eval "$(ssh-agent -s)"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+```sh
+git clone git@github.com:javi-cardenas/dotfiles.git
 ```
 
 ### Brewfile
@@ -61,6 +61,12 @@ brew bundle upgrade
 ```sh
 brew bundle dump # dump all dependencies into a Brewfile
 ```
+
+```sh
+touch ~/.gitconfig
+nano ~/.gitconfig
+```
+
 
 ## Proton Suite
 - ProtonVPN
