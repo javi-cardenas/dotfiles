@@ -18,20 +18,21 @@ This doc has been updated to work for macOS 15 Sequoia. This [repo](https://gith
 
 Install [Homebrew](https://brew.sh/)
 
-Note: After installing, follow the instructions in your terminal to add Homebrew to your PATH...
+Note: After installing, follow the instructions in your terminal to add Homebrew to your PATH..
 
-For later, use `brew update` to make sure everything is up-to-date.
+For later, use `brew update` to make sure everything is up-to-date
 
 ## VPN and Password Manager
+
+Used for privacy and getting my GitHub credentials..
+
 ```sh
 brew install --cask \
 protonvpn \
 proton-pass
 ```
 
-## Setup Git
-
-### [SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+## [GitHub SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ```sh
 ssh-keygen -t ed25519 -C "85462046+javi-cardenas@users.noreply.github.com"
@@ -40,13 +41,15 @@ ssh-add --apple-use-keychain ~/.ssh/id_ed25519
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
+Add the SSH key to your [GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and clone the repo below..
+
 ```sh
 git clone git@github.com:javi-cardenas/dotfiles.git
 ```
 
-### Brewfile
+## Brewfile
 
-Install Brewfile dependencies...
+Install Brewfile dependencies..
 
 ```sh
 brew bundle install
@@ -62,6 +65,17 @@ brew bundle upgrade
 brew bundle dump # dump all dependencies into a Brewfile
 ```
 
+## Configure Raycast
+Remove Spotlight search keyboard shortcut and make Command + Space the Raycast keyboard shortcut
+
+System Settings > Keyboard > Keyboard Shortcuts > Spotlight > Uncheck "Show Spotlight search"
+
+## Configure Ghostty
+
+### TODO
+
+## Configure Git
+
 ```sh
 touch ~/.gitconfig
 nano ~/.gitconfig
@@ -73,15 +87,6 @@ nano ~/.gitconfig
 - Proton Pass
 - Proton Mail
 - Proton Drive
-
-## Raycast
-Disable Apple's Spotlight and replace that hotkey with Raycast
-
-## Ghostyy
-
-
-## Git
-git config file
 
 ### GitHub SSH
 https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-yo$

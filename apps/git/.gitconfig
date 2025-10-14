@@ -4,8 +4,9 @@
 [github]
   user   = javi-cardenas
 [alias]
-  cm     = commit -m
+  co     = checkout
   s      = status
+  cm     = commit -m
   p      = push
 [push]
 	autoSetupRemote = true
