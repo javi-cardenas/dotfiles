@@ -109,7 +109,7 @@ General > Date & Time > 24-hour time & Lock Screen > On
 
 ## Keyboard
 Key repeat rate > Fast
-Delay Uuntil repeat > Short
+Delay until repeat > Short
 
 ## Trackpad
 Tap to click
@@ -133,6 +133,9 @@ Turn on trash after 30 days
 ## Widgets
 - Remove all widgets
 
+## Raycast Keyboard Shortcuts
+
+Window Management
+
 ### ohmyzsh
 https://github.com/ohmyzsh/ohmyzsh/
-
