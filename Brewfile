@@ -21,6 +21,7 @@ brew "gcc"
 brew "ripgrep"
 brew "fd"
 cask "font-jetbrains-mono-nerd-font"
+brew "luarocks" # Lua package manager
 brew "nvim" # Terminal Editor
 
 ## Other
