@@ -13,6 +13,16 @@ cask "cursor" # AI Code Editor
 cask "visual-studio-code" # Text Editor
 vscode "github.github-vscode-theme"
 
+# nvim dependencies
+brew "git"
+brew "make"
+brew "unzip"
+brew "gcc"
+brew "ripgrep"
+brew "fd"
+cask "font-jetbrains-mono-nerd-font"
+brew "nvim" # Terminal Editor
+
 ## Other
 cask "brave-browser" # browser
 cask "google-chrome" # browser
