@@ -139,3 +139,8 @@ Window Management
 
 ### ohmyzsh
 https://github.com/ohmyzsh/ohmyzsh/
+
+## Rust
+'''sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+'''
