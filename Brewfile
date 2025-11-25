@@ -37,3 +37,4 @@ cask "anki" # flashcards
 # CLIs
 ## Dev Tools
 brew "uv" # python package manager
+brew "wget" # download files from the web
