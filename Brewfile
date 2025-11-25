@@ -36,3 +36,4 @@ cask "anki" # flashcards
 # CLIs
 ## Dev Tools
 brew "git" # git version control
+brew "uv" # python package manager
