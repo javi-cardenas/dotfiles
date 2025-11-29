@@ -38,3 +38,5 @@ cask "anki" # flashcards
 ## Dev Tools
 brew "uv" # python package manager
 brew "wget" # download files from the web
+tap "oven-sh/bun"
+brew "oven-sh/bun/bun"  # bun runtime (npm alternative)
