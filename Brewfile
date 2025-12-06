@@ -23,6 +23,7 @@ brew "fd"
 cask "font-jetbrains-mono-nerd-font"
 brew "luarocks" # Lua package manager
 brew "nvim" # Terminal Editor
+brew "mise" # tool manager
 
 ## Other
 cask "brave-browser" # browser
@@ -30,7 +31,7 @@ cask "google-chrome" # browser
 cask "zen" # browser
 cask "obsidian" # notes
 cask "spotify" # music
-cask "docker" # containerization
+cask "docker-desktop" # containerization
 cask "discord" # comms
 cask "anki" # flashcards
 
@@ -38,5 +39,4 @@ cask "anki" # flashcards
 ## Dev Tools
 brew "uv" # python package manager
 brew "wget" # download files from the web
-tap "oven-sh/bun"
-brew "oven-sh/bun/bun"  # bun runtime (npm alternative)
+
