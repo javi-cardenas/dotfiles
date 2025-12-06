@@ -5,7 +5,17 @@ This doc has been updated to work for macOS 15 Sequoia. This [repo](https://gith
 ```sh
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/javi-cardenas/dotfiles/main/install.sh)"
 ```
-
+## Stow
+```sh
+# create the stow structure
+mkdir -p nvim/.config/nvim
+# move nvim config
+mv ~/.config/nvim/* ~/github/dotfiles/nvim/.config/nvim/
+# create symlinks
+cd ~/github/dotfiles && stow */
+# verify symlinks were created
+ls -la ~/.config/nvim
+```
 ## Dev Setup
 
 - [Homebrew](#homebrew)

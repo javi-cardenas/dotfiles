@@ -24,7 +24,8 @@ cask "font-jetbrains-mono-nerd-font"
 brew "luarocks" # Lua package manager
 brew "nvim" # Terminal Editor
 brew "mise" # tool manager
-
+brew "stow" # dotfiles symlinker
+brew "tree" # dir tree explorer
 ## Other
 cask "brave-browser" # browser
 cask "google-chrome" # browser
