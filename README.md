@@ -6,16 +6,26 @@ This doc has been updated to work for macOS 15 Sequoia. This [repo](https://gith
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/javi-cardenas/dotfiles/main/install.sh)"
 ```
 ## Stow
+
+Creates symlinks from the home directory to this repo
+
 ```sh
-# create the stow structure
-mkdir -p nvim/.config/nvim
-# move nvim config
-mv ~/.config/nvim/* ~/github/dotfiles/nvim/.config/nvim/
-# create symlinks
-cd ~/github/dotfiles && stow */
-# verify symlinks were created
-ls -la ~/.config/nvim
+brew install stow
+
+cd ~/github/dotfiles/stow
+
+stow -t ~ * # you can also provide a single directory
+
+stow -t ~ --adopt nvim # use if you have existing config files
+
+ls -la ~/.config/nvim # verify symlinks were created
+
+stow -t ~ -D nvim # removes symlinks
+
+stow -t ~ -R nvim # updates symlinks, use after pulling changes
 ```
+
+**Note:** Raycast doesn't use traditional config files. See `raycast/README.md` for Raycast configuration instructions.
 ## Dev Setup
 
 - [Homebrew](#homebrew)
@@ -82,11 +92,7 @@ System Settings > Keyboard > Keyboard Shortcuts > Spotlight > Uncheck "Show Spot
 
 ## Configure Git
 
-```sh
-touch ~/.gitconfig
-nano ~/.gitconfig
-```
-Copy and paste the .gitconfig contents here..
+TODO
 
 ### Node Version Manager (nvm)
 https://github.com/nvm-sh/nvm/blob/master/README.md#installing-and-updating

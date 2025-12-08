@@ -1,4 +1,0 @@
-#!/bin/bash
-
-mv your-new-script.sh ~/bin/script-name 
-chmod +x ~/bin/script-name # makes your script executable

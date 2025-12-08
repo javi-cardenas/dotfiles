@@ -4,10 +4,22 @@
 [github]
 	user = javi-cardenas
 [alias]
-	cm = commit -m
+	co = checkout
+	sw = switch # new with Git v2.23.0
+	
 	s = status
+	cm = commit -m
+	rs = reset --soft
 	p = push
+
+	lo = log --oneline
+	flo = log --oneline --decorate --graph --parents
+
+	merge = m
+	rebase = rb # NEVER rebase on a public branch like main
+
+	branch = b
 [push]
 	autoSetupRemote = true
 [init]
-	defaultBranch = master
+	defaultBranch = main
