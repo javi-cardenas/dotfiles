@@ -35,6 +35,7 @@ cask "spotify" # music
 cask "docker-desktop" # containerization
 cask "discord" # comms
 cask "anki" # flashcards
+gh # github
 
 # CLIs
 ## Dev Tools
