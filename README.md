@@ -87,6 +87,11 @@ stow -t ~ -D nvim # removes symlinks
 ## Mise
 TODO
 
+```sh
+mise i bun@latest
+source ~/.zshrc
+```
+
 ## Rust
 Install [Rust](https://rust-lang.org/learn/get-started/) using Rustup.
 
