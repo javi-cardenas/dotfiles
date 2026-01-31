@@ -4,6 +4,8 @@
 [github]
 	user = javi-cardenas
 [alias]
+	a = add
+
 	co = checkout
 	sw = switch # new with Git v2.23.0
 	
