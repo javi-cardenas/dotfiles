@@ -8,8 +8,9 @@
 
 	co = checkout
 	sw = switch # new with Git v2.23.0
-	
+
 	s = status
+	a = add
 	cm = commit -m
 	rs = reset --soft
 	p = push

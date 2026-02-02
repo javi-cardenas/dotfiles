@@ -1,4 +1,5 @@
-background-opacity = 0.5
+command = /opt/homebrew/bin/fish
+background-opacity = 0.8
 
 keybind = cmd+r=reload_config
 mouse-hide-while-typing = true
