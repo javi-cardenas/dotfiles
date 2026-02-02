@@ -1,4 +1,7 @@
 [tools]
 biome = "latest"
 bun = "latest"
-node = "lts"
+node = "latest"
+python = "latest"
+uv = "latest"
+yarn = "latest"

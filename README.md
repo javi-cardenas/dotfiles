@@ -26,7 +26,7 @@ Install [Homebrew](https://brew.sh/).
 Run the following command to install all Brewfile dependencies.
 
 ```sh
-brew bundle
+brew bundle -v
 ```
 
 ## Proton Suite
