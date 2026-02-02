@@ -11,9 +11,11 @@ cask "ghostty" # Terminal Emulator
 cask "bruno" # API OSS
 cask "cursor" # AI Code Editor
 cask "visual-studio-code" # Text Editor
+cask "zed" # Rust-based text editor
 vscode "github.github-vscode-theme"
 
 # nvim dependencies
+brew "fish"
 brew "git"
 brew "make"
 brew "unzip"
