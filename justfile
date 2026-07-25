@@ -1,19 +1,17 @@
 default:
-    @just --list
+    @./scripts/list.sh
 
-setup: brew stow
-
-brew:
-    brew bundle --verbose
-
-stow:
-    cd stow && stow -t ~ * && ls -la ~/.config
-
-unstow:
-    cd stow && stow -t ~ -D *
+brew profile="":
+    @./scripts/brew.sh "{{profile}}"
 
 finder:
-    chflags nohidden ~/Library
-    defaults write com.apple.finder AppleShowAllFiles YES
-    defaults write com.apple.finder ShowPathbar -bool true
-    defaults write com.apple.finder ShowStatusBar -bool true
+    @./scripts/finder.sh
+
+stow:
+    @./scripts/stow.sh
+
+unstow:
+    @./scripts/unstow.sh
+
+update profile="":
+    @./scripts/update.sh "{{profile}}"

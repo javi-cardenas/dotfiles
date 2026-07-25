@@ -1,0 +1,9 @@
+### PROTON
+cask "protonvpn" # vpn
+cask "proton-pass" # password manager
+cask "proton-mail" # email client
+cask "proton-drive" # cloud storage
+
+### OTHER
+cask "discord" # gaming & development
+cask "spotify" # music player

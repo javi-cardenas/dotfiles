@@ -12,7 +12,8 @@ A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a single configur
 Download my code as a ZIP.
 
 ```sh
-just brew # install all brewfile packages
+just brew work     # install shared and work packages
+just brew personal # install shared and personal packages
 ```
 
 `brew` installs CLI tools to `/opt/homebrew` and `cask` installs GUI applications to `/Applications`

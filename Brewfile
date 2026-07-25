@@ -1,32 +1,24 @@
-# proton suite
-cask "protonvpn" # vpn
-cask "proton-pass" # password manager
-cask "proton-mail" # email client
-cask "proton-drive" # cloud storage
+### BROWSERS
+cask "brave-browser" # chrome based daily driver
+cask "zen" # firefox based for demos
 
-# browsers
-cask "brave-browser" # chrome based
-cask "zen" # firefox based
-
-# dev tools
+### DEV GUIs
 cask "raycast" # spotlight replacement
 cask "ghostty" # terminal emulator
 cask "cursor" # code editor
 cask "zed" # code editor
 cask "beekeeper-studio" # db client
 cask "bruno" # api client
-cask "spotify" # music player
 cask "obsidian" # notes app
-cask "discord" # messaging app
-cask "font-jetbrains-mono"
+cask "font-jetbrains-mono" # jetbrains font
 
-# system tools
+### CLI TOOLS
 brew "git" # version control
 brew "stow" # dotfiles manager
 brew "cloc" # count lines of code
 brew "just" # task runner
 
-# shell
+### SHELL
 brew "starship"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
