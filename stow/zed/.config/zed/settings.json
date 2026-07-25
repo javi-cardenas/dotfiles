@@ -1,5 +1,20 @@
 {
   "agent": {
+    "favorite_models": [
+      {
+        "provider": "openai-subscribed",
+        "model": "gpt-5.6-sol",
+        "enable_thinking": true,
+        "effort": "high"
+      }
+    ],
+    "default_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-sol",
+      "enable_thinking": true,
+      "effort": "high"
+    },
+    "default_profile": "ask",
     "dock": "right",
     "sidebar_side": "right",
   },

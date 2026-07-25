@@ -1,83 +1,79 @@
-# MacOS Development Setup
-This document has been updated for macOS 26. You can download the repo on a new device as a ZIP to get started.
+# macOS Setup
+My dotfiles and setup instructions for macOS 26.
+
+## Prerequisites
+### Homebrew
+Install [Homebrew](https://brew.sh/).
+
+#### Brewfile
+A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a single configuration file that lists all my Homebrew packages, letting me set up new machines with one command.
+
+## Setup
+Download my code as a ZIP.
 
 ```sh
-just setup # install packages and link dotfiles after clone
+just brew # install all brewfile packages
 ```
 
-## Homebrew
-
-Install [Homebrew](https://brew.sh/), the missing package manager for macOS and make sure to add Homebrew to your PATH.
-
-```sh
-brew --version # verify installation
-```
-
-### Brewfile
-
-A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a single configuration file that lists all your Homebrew packages and applications, letting you set up new machines with one command.
-
-```sh
-just brew
-```
-
-`brew` installs CLI tools to `/usr/local/bin` and `cask` installs GUI applications to `/Applications`
+`brew` installs CLI tools to `/opt/homebrew` and `cask` installs GUI applications to `/Applications`
 
 ## GitHub
-
-Create a [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add it to your [GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), then clone this repository.
+Create an [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add it to my [GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), then clone the repo.
 
 ```sh
-ssh-keygen -t ed25519 -C "85462046+javi-cardenas@users.noreply.github.com" # creates a SSH key
-pbcopy < ~/.ssh/id_ed25519.pub # copies the SSH key to your clipboard
+# create ssh key
+ssh-keygen -t ed25519 -C "85462046+javi-cardenas@users.noreply.github.com"
 
-ssh -T git@github.com # verify SSH connection
+# copy ssh key to clipboard
+pbcopy < ~/.ssh/id_ed25519.pub
+
+# verify ssh connection
+ssh -T git@github.com
+
+# clone repo
 git clone git@github.com:javi-cardenas/dotfiles.git
 ```
 
 ## Stow
-
-[GNU Stow](https://www.gnu.org/software/stow/) creates symlinks from this repository to dotfiles in your home directory.
+[GNU Stow](https://www.gnu.org/software/stow/) creates symlinks from dotfiles in this repo to dotfiles in my home directory.
 
 ```sh
 just stow # create symlinks
 just unstow # remove symlinks
 ```
 
-## MacOS
-
+## macOS
 ### Finder
 
 ```sh
-just finder
+just finder # set finder preferences
 ```
 
-In Finder, use `cmd + shift + h` to take you to the Home folder and then drag it to the sidebar.
-
 ### Raycast
+[Raycast](https://raycast.com/) is my Spotlight replacement.
 
-[Raycast](https://raycast.com/) is a Spotlight replacement for macOS. Turn the Spotlight hotkey off, remap `cmd + space` to Raycast, and create hotkeys for window management.
+Turn the Spotlight hotkey off, remap `cmd + space` to Raycast, and create hotkeys for window management.
 
-- Settings -> Keyboard -> Keyboard Shortcuts -> Spotlight -> Show Spotlight search -> Off
-
-- Raycast -> Settings -> Extensions -> Window Management
+- Settings > Keyboard > Keyboard Shortcuts > Spotlight > Show Spotlight search > Off
+- Raycast > Settings > Extensions > Window Management
 
 ### Security
-
-- Filevault: Privacy & Security -> Filevault -> Turn On (Encrypts SSD)
-
-- Firewall: Network -> Firewall -> On
-
-- Rename local hostname: General -> Sharing -> Local hostname -> Edit. Make sure all file sharing is also disabled.
-
-- Locked screen: Notifications -> Allow notifications when the screen is locked -> Off
+- Network > Firewall > On
+- General > Sharing > Local hostname > Edit
+- Notifications > Allow notifications when the screen is locked > Off
+- Privacy & Security > FileVault > Turn On
 
 ### Storage
+- General > Storage > Empty Trash automatically
 
-- General -> Storage -> Empty Trash automatically
+### Desktop & Dock
+- Minimize windows into application icon > On
+- Automatically hide and show the Dock > On
+- Show suggested and recent apps in Dock > Off
 
 ### Keyboard
+- Key repeat rate > Fast
+- Delay until repeat > Short
 
-- Key repeat rate -> Fast
-
-- Delay until repeat -> Short
+### Trackpad
+- Tap to click > On
