@@ -75,6 +75,7 @@ Turn the Spotlight hotkey off, remap `cmd + space` to Raycast, and create hotkey
 ### Keyboard
 - Key repeat rate > Fast
 - Delay until repeat > Short
+- Turn keyboard backlight off after inactiviy > After 5 seconds
 
 ### Trackpad
 - Tap to click > On

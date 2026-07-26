@@ -22,12 +22,17 @@
     "cursor": {
       "default_config_options": {
         "mode": "ask",
+        "thinking": "true",
+        "model": "claude-fable-5"
       },
       "favorite_config_option_values": {
-        "model": ["composer-2.5[fast=true]"],
+        "model": [
+          "composer-2.5",
+          "claude-fable-5"
+        ]
       },
-      "type": "registry",
-    },
+      "type": "registry"
+    }
   },
   "auto_install_extensions": {
     "biome": true,
