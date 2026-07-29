@@ -1,5 +1,5 @@
 #!/bin/sh
-set -eu
+set -eu # exit on error i.e. non-zero exit (if a script exits with a zero then it was successful), unset variables
 
 script_dir=$(CDPATH= cd "$(dirname "$0")" && pwd)
 repo_dir=$(dirname "$script_dir")
