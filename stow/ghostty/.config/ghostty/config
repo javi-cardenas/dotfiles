@@ -1,5 +1,5 @@
 theme = Atom One Dark
-font-size = 12
+font-size = 14
 mouse-hide-while-typing = true
 cursor-style = underline
 cursor-style-blink = false

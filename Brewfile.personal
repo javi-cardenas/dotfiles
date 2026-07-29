@@ -7,3 +7,4 @@ cask "proton-drive" # cloud storage
 ### Other
 cask "discord" # gaming & development
 cask "spotify" # music player
+cask "steam" # gaming
