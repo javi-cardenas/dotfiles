@@ -8,3 +8,6 @@ cask "proton-drive" # cloud storage
 cask "discord" # gaming & development
 cask "spotify" # music player
 cask "steam" # gaming
+
+brew "mas" # mac app store
+mas "Things 3", id: 904280696
