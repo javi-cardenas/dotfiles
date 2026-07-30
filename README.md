@@ -64,6 +64,9 @@ Turn the Spotlight hotkey off, remap `cmd + space` to Raycast, and create hotkey
 - Notifications > Allow notifications when the screen is locked > Off
 - Privacy & Security > FileVault > Turn On
 
+### Battery
+- Charging > Charge Limit > 80%
+
 ### Storage
 - General > Storage > Empty Trash automatically
 
@@ -71,6 +74,10 @@ Turn the Spotlight hotkey off, remap `cmd + space` to Raycast, and create hotkey
 - Minimize windows into application icon > On
 - Automatically hide and show the Dock > On
 - Show suggested and recent apps in Dock > Off
+
+### Menu Bar
+- Clock > Display the time with seconds
+- Battery > Show percentage
 
 ### Keyboard
 - Key repeat rate > Fast
