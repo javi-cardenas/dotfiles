@@ -1,5 +1,5 @@
 default:
-    @./scripts/list.sh
+    @just --list
 
 brew profile="":
     @./scripts/brew.sh "{{profile}}"

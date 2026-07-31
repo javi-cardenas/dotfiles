@@ -1,4 +1,4 @@
-### shell
+# --- SHELL ---
 # zsh-completions
 if type brew &>/dev/null; then
     FPATH="$(brew --prefix)/share/zsh-completions:$FPATH"
@@ -24,14 +24,14 @@ bindkey '^[[B' history-substring-search-down
 
 # prompt
 eval "$(starship init zsh)"
+# --- SHELL ---
 
-### go
-export PATH="$PATH:$HOME/.local/opt/go/bin"
+# --- LANGUAGES ---
+export PATH="$PATH:$HOME/.local/opt/go/bin" # Go
+export CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER=x86_64-linux-musl-gcc # Rust
+# --- LANGUAGES
 
-### rust
-export CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER=x86_64-linux-musl-gcc
-
-### aliases
+# --- ALIASES ---
 # personal
 alias javi="cd ~/repos/javi-cardenas"
 alias boot="cd ~/repos/javi-cardenas/bootdotdev"
@@ -52,3 +52,4 @@ alias ka="kubectl apply -f"
 alias kp="kubectl port-forward"
 alias mk="minikube"
 alias z="zed"
+# --- ALIASES ---

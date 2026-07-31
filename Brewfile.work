@@ -1,0 +1,2 @@
+tap "anomalyco/tap"
+brew "opencode" # ai terminal agent
