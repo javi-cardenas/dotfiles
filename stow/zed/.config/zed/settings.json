@@ -1,6 +1,6 @@
 {
+  "ui_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "agent_buffer_font_size": 14.0,
-  "agent_ui_font_size": 16.0,
   "agent": {
     "favorite_models": [
       {
@@ -11,7 +11,7 @@
       }
     ],
     "default_model": {
-      "provider": "openai-subscribed",
+      "provider": "openai",
       "model": "gpt-5.6-sol",
       "enable_thinking": true,
       "effort": "high"
@@ -29,8 +29,7 @@
       },
       "favorite_config_option_values": {
         "model": [
-          "composer-2.5",
-          "claude-fable-5"
+          "composer-2.5"
         ]
       },
       "type": "registry"
@@ -43,7 +42,6 @@
     "dockerfile": true,
     "git-firefly": true,
     "helm": true,
-    "html": true,
     "just": true,
     "log": true,
     "material-icon-theme": true,
@@ -55,7 +53,7 @@
     "toml": true,
   },
   "base_keymap": "Cursor",
-  "buffer_font_family": "JetBrains Mono NL",
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "buffer_font_size": 18.0,
   "cli_default_open_behavior": "new_window",
   "icon_theme": "Material Icon Theme",
@@ -75,6 +73,9 @@
     "metrics": false,
   },
   "terminal": {
+    "shell": {
+      "program": "/bin/zsh"
+    },
     "font_size": 16.0,
     "cursor_shape": "underline",
   },
@@ -82,6 +83,5 @@
     "dark": "One Dark Pro",
     "light": "One Light",
   },
-  "ui_font_family": "JetBrains Mono NL",
   "ui_font_size": 16.0,
 }
