@@ -1,3 +1,5 @@
+tap "oven-sh/bun"
+
 ### GUIs
 cask "beekeeper-studio" # sql editor
 cask "brave-browser" # chrome based daily driver
@@ -11,6 +13,7 @@ cask "zed" # code editor
 cask "zen" # firefox based for demos
 
 ### CLIs
+brew "bun" # fast nodejs runtime
 brew "cloc" # lines of code
 brew "git" # version control
 brew "just" # shell script runner
