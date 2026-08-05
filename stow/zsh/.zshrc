@@ -52,4 +52,5 @@ alias ka="kubectl apply -f"
 alias kp="kubectl port-forward"
 alias mk="minikube"
 alias z="zed"
+alias loc="cloc . --vcs=git"
 # --- ALIASES ---

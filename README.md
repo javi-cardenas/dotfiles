@@ -79,6 +79,9 @@ Turn the Spotlight hotkey off, remap `cmd + space` to Raycast, and create hotkey
 - Clock > Display the time with seconds
 - Battery > Show percentage
 
+#### Screen Saver
+- Wallpaper > Screen Saver > Start Screen Saver > After 1 minute
+
 ### Keyboard
 - Key repeat rate > Fast
 - Delay until repeat > Short
