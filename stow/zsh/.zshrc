@@ -36,6 +36,7 @@ export CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER=x86_64-linux-musl-gcc # Rus
 alias javi="cd ~/repos/javi-cardenas"
 alias boot="cd ~/repos/javi-cardenas/bootdotdev"
 alias dotfiles="cd ~/repos/javi-cardenas/dotfiles && zed ."
+alias dice="cd ~/repos/javi-cardenas/liars-dice && zed ."
 
 # work
 alias actions="cd ~/repos/javi-cardenas-ke/ke-actions"
