@@ -60,9 +60,7 @@ if [ "$dry_run" = true ]; then
   gh pr view --json number,title,state,url
   echo "Would run:"
   echo "  gh pr merge --squash --delete-branch"
-  echo "  git switch $default_branch"
-  echo "  git pull"
-  echo "  git branch -D $current_branch"
+  echo "  git pull --quiet"
   if [ "$has_backup" = true ]; then
     echo "  git branch -D $backup_branch"
   fi
@@ -70,10 +68,8 @@ if [ "$dry_run" = true ]; then
 fi
 
 gh pr merge --squash --delete-branch
-git switch "$default_branch"
-git pull
-git branch -D "$current_branch"
+git pull --quiet >/dev/null 2>&1
 
 if [ "$has_backup" = true ]; then
-  git branch -D "$backup_branch"
+  git branch -D "$backup_branch" >/dev/null 2>&1
 fi

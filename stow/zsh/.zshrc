@@ -47,7 +47,7 @@ alias lib="cd ~/repos/javi-cardenas-ke/ke-libraries"
 alias nova="cd ~/repos/javi-cardenas-ke/hei-nova"
 
 # github
-alias ghpr="gh pr create --fill"
+alias ghpr="gh pr create --fill-first"
 
 # kubernetes
 alias k="kubectl"
