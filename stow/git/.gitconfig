@@ -4,6 +4,7 @@
 [github]
 	user = javi-cardenas
 [alias]
+	b = branch
 	sw = switch
 	s = status
 	a = add
