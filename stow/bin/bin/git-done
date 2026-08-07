@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+dry_run=false
+
+if [ $# -gt 1 ]; then
+  echo "Usage: git done [--dry-run]" >&2
+  exit 1
+fi
+
+case "${1:-}" in
+  "")
+    ;;
+  --dry-run)
+    dry_run=true
+    ;;
+  *)
+    echo "Usage: git done [--dry-run]" >&2
+    exit 1
+    ;;
+esac
+
+current_branch=$(git symbolic-ref --short HEAD)
+
+if default_branch=$(git symbolic-ref --quiet --short refs/remotes/origin/HEAD 2>/dev/null); then
+  default_branch=${default_branch#origin/}
+else
+  default_branch=main
+fi
+
+if [ "$current_branch" = "$default_branch" ]; then
+  echo "Error: already on '$default_branch'..." >&2
+  exit 1
+fi
+
+backup_branch="${current_branch}-backup"
+has_backup=false
+if git show-ref --verify --quiet "refs/heads/$backup_branch"; then
+  has_backup=true
+fi
+
+if [ "$dry_run" = true ]; then
+  gh pr view --json number,title,state,url
+  echo "Would run:"
+  echo "  gh pr merge --squash --delete-branch --yes"
+  echo "  git switch $default_branch"
+  echo "  git pull"
+  echo "  git branch -D $current_branch"
+  if [ "$has_backup" = true ]; then
+    echo "  git branch -D $backup_branch"
+  fi
+  exit 0
+fi
+
+gh pr merge --squash --delete-branch --yes
+git switch "$default_branch"
+git pull
+git branch -D "$current_branch"
+
+if [ "$has_backup" = true ]; then
+  git branch -D "$backup_branch"
+fi
