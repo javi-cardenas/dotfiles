@@ -24,6 +24,8 @@ bindkey '^[[B' history-substring-search-down
 
 # prompt
 eval "$(starship init zsh)"
+
+export PATH="$HOME/bin:$PATH" # my bash scripts
 # --- SHELL ---
 
 # --- LANGUAGES ---

@@ -1,5 +1,5 @@
-#!/bin/sh
-set -eu # exit on error i.e. non-zero exit (if a script exits with a zero then it was successful), unset variables
+#!/usr/bin/env bash
+set -euo pipefail
 
 script_dir=$(CDPATH= cd "$(dirname "$0")" && pwd)
 repo_dir=$(dirname "$script_dir")
@@ -36,6 +36,8 @@ case "$profile" in
         exit 2
         ;;
 esac
+
+"$script_dir/git-profile.sh" "$profile"
 
 cd "$repo_dir"
 brew bundle --verbose --file="Brewfile"

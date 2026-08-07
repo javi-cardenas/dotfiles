@@ -1,5 +1,5 @@
-#!/bin/sh
-set -eu
+#!/usr/bin/env bash
+set -euo pipefail
 
 chflags nohidden "$HOME/Library"
 defaults write com.apple.finder AppleShowAllFiles YES
