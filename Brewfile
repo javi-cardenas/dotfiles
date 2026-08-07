@@ -15,6 +15,7 @@ cask "zen" # firefox based for demos
 ### CLIs
 brew "bun" # fast nodejs runtime
 brew "cloc" # lines of code
+brew "gh" # github cli
 brew "git" # version control
 brew "just" # shell script runner
 brew "starship" # custom shell prompt

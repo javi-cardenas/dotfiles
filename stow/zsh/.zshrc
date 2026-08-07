@@ -46,6 +46,9 @@ alias ke="cd ~/repos/javi-cardenas-ke"
 alias lib="cd ~/repos/javi-cardenas-ke/ke-libraries"
 alias nova="cd ~/repos/javi-cardenas-ke/hei-nova"
 
+# github
+alias ghpr="gh pr create --fill"
+
 # kubernetes
 alias k="kubectl"
 alias kgp="kubectl get pods -A -o wide"

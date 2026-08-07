@@ -33,6 +33,23 @@ if [ "$current_branch" = "$default_branch" ]; then
   exit 1
 fi
 
+if [ -n "$(git status --porcelain)" ]; then
+  echo "Error: uncommitted changes, commit and push before running git done..." >&2
+  exit 1
+fi
+
+upstream=$(git rev-parse --abbrev-ref --symbolic-full-name '@{upstream}' 2>/dev/null || true)
+if [ -z "$upstream" ]; then
+  echo "Error: no upstream branch, push before running git done..." >&2
+  exit 1
+fi
+
+unpushed=$(git rev-list --count "$upstream..HEAD")
+if [ "$unpushed" -gt 0 ]; then
+  echo "Error: $unpushed unpushed commit(s), push before running git done..." >&2
+  exit 1
+fi
+
 backup_branch="${current_branch}-backup"
 has_backup=false
 if git show-ref --verify --quiet "refs/heads/$backup_branch"; then
@@ -42,7 +59,7 @@ fi
 if [ "$dry_run" = true ]; then
   gh pr view --json number,title,state,url
   echo "Would run:"
-  echo "  gh pr merge --squash --delete-branch --yes"
+  echo "  gh pr merge --squash --delete-branch"
   echo "  git switch $default_branch"
   echo "  git pull"
   echo "  git branch -D $current_branch"
@@ -52,7 +69,7 @@ if [ "$dry_run" = true ]; then
   exit 0
 fi
 
-gh pr merge --squash --delete-branch --yes
+gh pr merge --squash --delete-branch
 git switch "$default_branch"
 git pull
 git branch -D "$current_branch"
