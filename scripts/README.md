@@ -1,5 +1,5 @@
 ```sh
-#!/bin/sh # shebang (#!) tells the kernel to pass this file to the /bin/sh interpreter program when running  this file directly (e.g. `./script.sh`)
+#!/usr/bin/env bash # shebang (#!) tells the kernel to pass this file to bash when running it directly (e.g. `./script.sh`)
 
-set -eu # -e: error on non-zero exits (if a program exits with exit code 0, then it was successful); -u: error if the program uses unset variables
+set -euo pipefail # -e: exit on error; -u: error on unset variables; -o pipefail: fail on pipeline errors
 ```

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ $# -lt 1 ]; then
+  echo "Usage: git squash <base-branch>" >&2
+  exit 1
+fi
+
+base_branch="$1"
+current_branch=$(git symbolic-ref --short HEAD)
+
+if [ "$current_branch" = "$base_branch" ]; then
+  echo "Error: you are on '$base_branch', the same branch you tried to squash..." >&2
+  exit 1
+fi
+
+git backup
+merge_base=$(git merge-base "$base_branch" "$current_branch")
+git reset --soft "$merge_base"
+git commit
+git push --force-with-lease origin "$current_branch"

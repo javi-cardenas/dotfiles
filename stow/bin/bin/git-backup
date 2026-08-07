@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+current_branch=$(git symbolic-ref --short HEAD)
+backup_branch="${current_branch}-backup"
+git branch "$backup_branch"
+echo "Backup created: $backup_branch"
