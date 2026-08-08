@@ -1,25 +1,23 @@
 default:
     @just --list
 
-brew profile="":
-    #!/usr/bin/env bash
-    set -euo pipefail
-    ./scripts/brew.sh "{{profile}}"
-    if [ -z "{{profile}}" ]; then
-        ./scripts/git-profile.sh
-    fi
+brew:
+    @./scripts/brew.sh
 
 finder:
-    @./scripts/finder.sh
+    chflags nohidden "$HOME/Library"
+    defaults write com.apple.finder AppleShowAllFiles YES
+    defaults write com.apple.finder ShowPathbar -bool true
+    defaults write com.apple.finder ShowStatusBar -bool true
 
 stow:
-    @./scripts/stow.sh
+    cd stow && stow --target "$HOME" *
+    ls -la "$HOME/.config"
 
 unstow:
-    @./scripts/unstow.sh
+    cd stow && stow --target "$HOME" --delete *
 
-update profile="":
-    @./scripts/update.sh "{{profile}}"
-
-git-profile:
-    @./scripts/git-profile.sh
+update:
+    just brew
+    just unstow
+    just stow
