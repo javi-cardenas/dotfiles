@@ -14,32 +14,29 @@ A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a single configur
 Download my code as a ZIP.
 
 ```sh
-just brew # install packages and set git identity
+./scripts/setup.sh  # one time run to install packages and setup dotfiles
 ```
 
+After just is installed, you can use `just update` to update packages and dotfiles.
+
 ## GitHub
-Create an [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add it to my [GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), then clone the repo.
+Create an [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add it to my [GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account#adding-a-new-ssh-key-to-your-account), then clone the repo.
 
 ```sh
-ssh-keygen -t ed25519 -C "85462046+javi-cardenas@users.noreply.github.com" # create ssh key
-pbcopy < ~/.ssh/id_ed25519.pub # copy ssh key to clipboard
-ssh -T git@github.com # verify ssh connection
-git clone git@github.com:javi-cardenas/dotfiles.git # clone repo
+ # create and copy ssh key to clipboard
+ssh-keygen -t ed25519 -C  "$(git config --global user.email)" && pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+```sh
+git clone git@github.com:javi-cardenas/dotfiles.git
 ```
 
 ## Stow
-[GNU Stow](https://www.gnu.org/software/stow/) creates symlinks from dotfiles in this repo to dotfiles in my home directory.
-
-```sh
-just stow # create symlinks
-just unstow # remove symlinks
-```
+[GNU Stow](https://www.gnu.org/software/stow/) creates symlinks from dotfiles in this repo to dotfiles in my home directory, `just stow` creates the symlinks and `just unstow` removes them.
 
 ## macOS
 ### Finder
-```sh
-just finder # set finder preferences
-```
+`just finder` sets finder preferences.
 
 ### Raycast
 [Raycast](https://raycast.com/) is my Spotlight replacement; remap `cmd + space` and create hotkeys for window management.

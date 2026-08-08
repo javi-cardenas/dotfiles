@@ -21,3 +21,4 @@ update:
     just brew
     just unstow
     just stow
+    just finder
