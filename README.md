@@ -14,7 +14,7 @@ A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a single configur
 Download my code as a ZIP.
 
 ```sh
-just brew <personal> # install base and/or personal packages
+just brew # install packages and set git identity
 ```
 
 ## GitHub
