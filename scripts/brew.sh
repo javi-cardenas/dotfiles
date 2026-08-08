@@ -9,36 +9,33 @@ print_usage() {
     printf '%s\n' \
         "" \
         "Available profiles:" \
-        "  work" \
         "  personal" \
         "" \
         "Usage:" \
-        "  just brew <work|personal>" \
-        "  just update <work|personal>" >&2
+        "  just brew" \
+        "  just brew personal" \
+        "  just update" \
+        "  just update personal" >&2
 }
 
 if [ "$#" -gt 1 ]; then
-    echo "Error: expected exactly one profile." >&2
+    echo "Error: expected at most one profile." >&2
     print_usage
     exit 2
 fi
 
 case "$profile" in
-    work|personal) ;;
-    "")
-        echo "Error: a profile is required." >&2
-        print_usage
-        exit 2
-        ;;
+    ""|personal) ;;
     *)
-        echo "Error: profile must be 'work' or 'personal'." >&2
+        echo "Error: profile must be 'personal'." >&2
         print_usage
         exit 2
         ;;
 esac
 
-"$script_dir/git-profile.sh" "$profile"
-
 cd "$repo_dir"
 brew bundle --verbose --file="Brewfile"
-brew bundle --verbose --file="Brewfile.$profile"
+
+if [ "$profile" = "personal" ]; then
+    brew bundle --verbose --file="Brewfile.personal"
+fi
