@@ -5,10 +5,12 @@ My dotfiles and setup instructions for macOS 26.
 ### Homebrew
 Install [Homebrew](https://brew.sh/).
 
-#### Brewfile
-A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a single configuration file that lists all my Homebrew packages, letting me set up new machines with one command.
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
-`brew` installs CLI tools to `/opt/homebrew` and `cask` installs GUI applications to `/Applications`.
+#### Brewfile
+A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a single configuration file that lists all my Homebrew packages, letting me set up new machines with one command. `brew` installs CLI tools to `/opt/homebrew` and `cask` installs GUI applications to `/Applications`.
 
 ## Setup
 Download my code as a ZIP.
@@ -35,7 +37,7 @@ git clone git@github.com:javi-cardenas/dotfiles.git
 [GNU Stow](https://www.gnu.org/software/stow/) creates symlinks from dotfiles in this repo to dotfiles in my home directory, `just stow` creates the symlinks and `just unstow` removes them.
 
 ## macOS
-`just macos` applies system preferences, manual setup still required:
+`just macos` applies system preferences, manual setup still required for the following:
 
 ### Raycast
 [Raycast](https://raycast.com/) is my Spotlight replacement; remap `cmd + space` and create hotkeys for window management.
