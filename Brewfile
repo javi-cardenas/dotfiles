@@ -3,7 +3,6 @@ tap "oven-sh/bun"
 cask "beekeeper-studio" # sql editor
 cask "brave-browser" # chrome based daily driver
 cask "bruno" # api client
-cask "cursor" # code editor
 cask "font-jetbrains-mono-nerd-font" # jetbrains nerd font
 cask "ghostty" # terminal emulator
 cask "obsidian" # notes app

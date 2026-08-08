@@ -1,3 +1,4 @@
+cask "cursor" # code editor
 cask "discord" # gaming & development
 brew "mas" # mac app store
 cask "protonvpn" # vpn
