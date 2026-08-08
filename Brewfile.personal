@@ -1,13 +1,10 @@
-### Proton
+cask "discord" # gaming & development
+brew "mas" # mac app store
 cask "protonvpn" # vpn
 cask "proton-pass" # password manager
 cask "proton-mail" # email client
 cask "proton-drive" # cloud storage
-
-### Other
-cask "discord" # gaming & development
 cask "spotify" # music player
 cask "steam" # gaming
 
-brew "mas" # mac app store
 mas "Things 3", id: 904280696

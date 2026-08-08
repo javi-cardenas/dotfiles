@@ -2,7 +2,12 @@ default:
     @just --list
 
 brew profile="":
-    @./scripts/brew.sh "{{profile}}"
+    #!/usr/bin/env bash
+    set -euo pipefail
+    ./scripts/brew.sh "{{profile}}"
+    if [ -z "{{profile}}" ]; then
+        ./scripts/git-profile.sh
+    fi
 
 finder:
     @./scripts/finder.sh
@@ -15,3 +20,6 @@ unstow:
 
 update profile="":
     @./scripts/update.sh "{{profile}}"
+
+git-profile:
+    @./scripts/git-profile.sh

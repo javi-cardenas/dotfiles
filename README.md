@@ -14,10 +14,8 @@ A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a single configur
 Download my code as a ZIP.
 
 ```sh
-just brew <personal | work> # install work or personal packages, alongside general packages
+just brew <personal> # install base and/or personal packages
 ```
-
-`just brew work` prompts me for my work email and GitHub username if .gitconfig is configured with my personal defaults, `just brew personal` resets .gitconfig to my personal defaults.
 
 ## GitHub
 Create an [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) and add it to my [GitHub account](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account), then clone the repo.

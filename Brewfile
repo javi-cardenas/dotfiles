@@ -1,6 +1,5 @@
 tap "oven-sh/bun"
 
-### GUIs
 cask "beekeeper-studio" # sql editor
 cask "brave-browser" # chrome based daily driver
 cask "bruno" # api client
@@ -12,7 +11,6 @@ cask "raycast" # spotlight replacement
 cask "zed" # code editor
 cask "zen" # firefox based for demos
 
-### CLIs
 brew "bun" # fast nodejs runtime
 brew "cloc" # lines of code
 brew "gh" # github cli
@@ -20,7 +18,7 @@ brew "git" # version control
 brew "just" # shell script runner
 brew "starship" # custom shell prompt
 brew "stow" # dotfiles manager
-brew "zsh-autosuggestions"
-brew "zsh-completions"
-brew "zsh-history-substring-search"
-brew "zsh-syntax-highlighting"
+brew "zsh-autosuggestions" # shell autosuggestions
+brew "zsh-completions" # shell autocomplete
+brew "zsh-history-substring-search" # shell history search
+brew "zsh-syntax-highlighting" # shell command highlights
