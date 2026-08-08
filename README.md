@@ -35,8 +35,7 @@ git clone git@github.com:javi-cardenas/dotfiles.git
 [GNU Stow](https://www.gnu.org/software/stow/) creates symlinks from dotfiles in this repo to dotfiles in my home directory, `just stow` creates the symlinks and `just unstow` removes them.
 
 ## macOS
-### Finder
-`just finder` sets finder preferences.
+`just macos` applies system preferences, manual setup still required:
 
 ### Raycast
 [Raycast](https://raycast.com/) is my Spotlight replacement; remap `cmd + space` and create hotkeys for window management.
@@ -45,7 +44,6 @@ git clone git@github.com:javi-cardenas/dotfiles.git
 - Raycast > Settings > Extensions > Window Management
 
 ### Security
-- Network > Firewall > On
 - General > Sharing > Local hostname > Edit
 - Notifications > Allow notifications when the screen is locked > Off
 - Privacy & Security > FileVault > Turn On
@@ -53,19 +51,11 @@ git clone git@github.com:javi-cardenas/dotfiles.git
 ### Battery
 - Charging > Charge Limit > 80%
 
-### Storage
-- General > Storage > Empty Trash automatically
-
-### Desktop & Dock
-- Minimize windows into application icon > On
-- Automatically hide and show the Dock > On
-- Show suggested and recent apps in Dock > Off
-
 ### Menu Bar
 - Clock > Display the time with seconds
 - Battery > Show percentage
 
-#### Screen Saver
+### Screen Saver
 - Wallpaper > Screen Saver > Start Screen Saver > After 1 minute
 
 ### Keyboard
