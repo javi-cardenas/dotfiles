@@ -17,6 +17,7 @@ brew "git" # version control
 brew "just" # shell script runner
 brew "starship" # custom shell prompt
 brew "stow" # dotfiles manager
+brew "uv" # python package manager
 brew "zsh-autosuggestions" # shell autosuggestions
 brew "zsh-completions" # shell autocomplete
 brew "zsh-history-substring-search" # shell history search
