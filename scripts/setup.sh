@@ -6,5 +6,5 @@ repo_dir=$(dirname "$script_dir")
 
 cd "$repo_dir"
 "$script_dir/brew.sh"
-just stow
 just macos
+just stow
