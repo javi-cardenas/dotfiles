@@ -9,4 +9,4 @@ cask "steam" # gaming
 brew "mas" # mac app store
 mas "Things 3", id: 904280696
 
-brew proton-pass-cli # password manager cli
+brew "proton-pass-cli" # password manager cli
