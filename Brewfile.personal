@@ -1,3 +1,4 @@
+cask "cursor" # ai coding assistant
 cask "discord" # gaming & development
 cask "protonvpn" # vpn
 cask "proton-pass" # password manager
