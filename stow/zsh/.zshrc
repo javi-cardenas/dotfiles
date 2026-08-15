@@ -35,11 +35,15 @@ export CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER=x86_64-linux-musl-gcc # Rus
 
 # --- ALIASES ---
 # personal
-alias javi="cd ~/repos/javi-cardenas"
+alias ls="ls -la"
+alias reload="source ~/.zshrc"
+
 alias boot="cd ~/repos/javi-cardenas/bootdotdev"
 alias dotfiles="cd ~/repos/javi-cardenas/dotfiles"
 alias dice="cd ~/repos/javi-cardenas/liars-dice"
+alias javi="cd ~/repos/javi-cardenas"
 alias notes="cd ~/Documents/obsidian"
+
 alias pass="pass-cli"
 alias unlock="pass session unlock"
 
