@@ -36,6 +36,7 @@ export CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER=x86_64-linux-musl-gcc # Rus
 # --- ALIASES ---
 # personal
 alias ls="ls -la"
+alias lsd="lsd --tree"
 alias reload="source ~/.zshrc"
 
 alias boot="cd ~/repos/javi-cardenas/bootdotdev"
@@ -67,3 +68,6 @@ alias mk="minikube"
 alias z="zed"
 alias loc="cloc . --vcs=git"
 # --- ALIASES ---
+
+# Generated for envman. Do not edit. Used by Webi
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

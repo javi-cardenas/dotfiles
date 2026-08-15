@@ -15,6 +15,8 @@ brew "cloc" # lines of code
 brew "gh" # github cli
 brew "git" # version control
 brew "just" # shell script runner
+brew "lsd" # better ls
+brew "neovim" # terminal code editor
 brew "starship" # custom shell prompt
 brew "stow" # dotfiles manager
 brew "uv" # python package manager
