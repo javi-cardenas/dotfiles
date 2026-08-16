@@ -38,6 +38,7 @@ export CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER=x86_64-linux-musl-gcc # Rus
 alias ls="ls -la"
 alias lsd="lsd --tree"
 alias reload="source ~/.zshrc"
+alias nv="nvim"
 
 alias boot="cd ~/repos/javi-cardenas/bootdotdev"
 alias dotfiles="cd ~/repos/javi-cardenas/dotfiles"
