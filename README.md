@@ -39,10 +39,13 @@ Setup runs automated preferences via `just macos` but manual setup is still need
 #### Security
 - General > Sharing > Local hostname > Edit
 - Notifications > Allow notifications when the screen is locked > Off
-- Privacy & Security > FileVault > Turn On
+- Privacy & Security > FileVault > On
 
 #### Battery
 - Charging > Charge Limit > 80%
+
+#### Storage
+- General > Storage > Empty Trash automatically > On
 
 #### Menu Bar
 - Clock > Display the time with seconds
