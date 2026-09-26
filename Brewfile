@@ -6,6 +6,7 @@ cask "brave-browser" # chrome based daily driver
 cask "bruno" # api client
 cask "font-jetbrains-mono-nerd-font" # jetbrains nerd font
 cask "ghostty" # terminal emulator
+cask "notion" # notes app
 cask "obsidian" # notes app
 cask "raycast" # spotlight replacement
 cask "t3-code" # ai code editor
