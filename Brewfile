@@ -8,6 +8,7 @@ cask "font-jetbrains-mono-nerd-font" # jetbrains nerd font
 cask "ghostty" # terminal emulator
 cask "obsidian" # notes app
 cask "raycast" # spotlight replacement
+cask "t3-code" # ai code editor
 cask "zed" # code editor
 cask "zen" # firefox based for demos
 

@@ -45,6 +45,7 @@ alias dotfiles="cd ~/repos/javi-cardenas/dotfiles"
 alias dice="cd ~/repos/javi-cardenas/liars-dice"
 alias javi="cd ~/repos/javi-cardenas"
 alias notes="cd ~/Documents/obsidian"
+alias proton="cd ~/Library/CloudStorage/ProtonDrive-javicardenas@pm.me-folder"
 
 alias pass="pass-cli"
 alias unlock="pass session unlock"
