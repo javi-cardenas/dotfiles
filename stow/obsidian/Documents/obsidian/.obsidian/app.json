@@ -1,8 +1,0 @@
-{
-  "alwaysUpdateLinks": true,
-  "showInlineTitle": false,
-  "showLineNumber": true,
-  "showIndentGuide": true,
-  "attachmentFolderPath": "./Attachments",
-  "deleteUnlinkedAttachments": "always"
-}
