@@ -29,12 +29,12 @@
       "default_config_options": {
         "mode": "ask",
         "thinking": "true",
-        "model": "claude-fable-5-1"
+        "model": "composer-2.5"
       },
       "favorite_config_option_values": {
         "model": [
           "composer-2.5",
-          "claude-fable-5"
+          "claude-fable-5-1"
         ]
       },
       "type": "registry"
