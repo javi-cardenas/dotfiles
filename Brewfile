@@ -25,8 +25,10 @@ brew "bun" # fast nodejs runtime
 brew "cloc" # lines of code
 brew "gh" # github cli
 brew "git" # version control
+brew "go" # go language
 brew "just" # shell script runner
 brew "proton-pass-cli" # password manager cli
+brew "shellcheck" # shell script linter
 brew "starship" # custom shell prompt
 brew "stow" # dotfiles manager
 brew "uv" # python package manager
