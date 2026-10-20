@@ -29,14 +29,16 @@ export PATH="$HOME/bin:$PATH" # my bash scripts
 # --- SHELL ---
 
 # --- LANGUAGES ---
-export PATH="$PATH:$HOME/.local/opt/go/bin" # Go
-export CARGO_TARGET_X86_64_UNKNOWN_LINUX_MUSL_LINKER=x86_64-linux-musl-gcc # Rust
-# --- LANGUAGES
+export PATH="$HOME/.local/bin:$PATH" # uv tools
+export PATH="$PATH:$HOME/go/bin" # go install binaries
+# --- LANGUAGES ---
 
 # --- ALIASES ---
 # personal
 alias ls="ls -la"
 alias reload="source ~/.zshrc"
+alias z="zed"
+alias loc="cloc . --vcs=git"
 
 alias boot="cd ~/repos/javi-cardenas/bootdotdev"
 alias dotfiles="cd ~/repos/javi-cardenas/dotfiles"
@@ -48,26 +50,6 @@ alias proton="cd ~/Library/CloudStorage/ProtonDrive-javicardenas@pm.me-folder"
 alias pass="pass-cli"
 alias unlock="pass session unlock"
 
-# work
-alias actions="cd ~/repos/javi-cardenas-ke/ke-actions"
-alias ke="cd ~/repos/javi-cardenas-ke"
-alias lib="cd ~/repos/javi-cardenas-ke/ke-libraries"
-alias nova="cd ~/repos/javi-cardenas-ke/hei-nova"
-
 # github
 alias ghpr="gh pr create --fill-first"
-
-# kubernetes
-alias k="kubectl"
-alias kgp="kubectl get pods -A -o wide"
-alias kgs="kubectl get svc"
-alias kl="kubectl logs"
-alias ka="kubectl apply -f"
-alias kp="kubectl port-forward"
-alias mk="minikube"
-alias z="zed"
-alias loc="cloc . --vcs=git"
 # --- ALIASES ---
-
-# Generated for envman. Do not edit. Used by Webi
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
