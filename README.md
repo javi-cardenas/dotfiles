@@ -19,16 +19,20 @@ pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 ## Setup
-Clone the repo and run the setup script. Use `just update` when pulling changes.
+Install just, clone the repo and run `just up`. Rerun `just up` after pulling changes or editing the Brewfile.
 
 ```sh
+brew install just
 git clone git@github.com:javi-cardenas/dotfiles.git
 cd dotfiles
-./scripts/setup.sh  # install packages and setup dotfiles
+just up     # install the Brewfile and symlink dotfiles
+just macos  # apply macOS defaults
 ```
 
+If a real file already sits where a dotfile symlink goes, `just up` adopts it into `stow/` and warns you. Review with `git diff -- stow`, then commit it or `git restore stow` to keep the repo version.
+
 ### macOS
-Setup runs automated preferences via `just macos` but manual setup is still needed for:
+`just macos` applies the automated preferences but manual setup is still needed for:
 
 #### Raycast
 [Raycast](https://raycast.com/) is my Spotlight replacement; remap `cmd + space` and create hotkeys for window management.
