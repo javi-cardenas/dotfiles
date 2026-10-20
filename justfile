@@ -21,3 +21,8 @@ prune:
 # apply macOS defaults (needs sudo)
 macos:
     @./scripts/macos.sh
+
+# update Vendored skills, then review the diff before committing
+skills:
+    bunx skills update --global --yes
+    git status --short -- stow/agents

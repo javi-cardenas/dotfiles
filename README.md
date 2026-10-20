@@ -1,7 +1,7 @@
 # Dotfiles
-My dotfiles for macOS 26.
+My dotfiles for macOS. The repo describes one Mac, and anything installed or configured outside it is Drift. See [GLOSSARY.md](GLOSSARY.md) for the terms.
 
-## Prerequisites
+## New Mac
 ### Homebrew
 Install [Homebrew](https://brew.sh/).
 
@@ -13,65 +13,50 @@ Install [Homebrew](https://brew.sh/).
 Create a [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) and add it to my [GitHub account](https://github.com/settings/keys).
 
 ```sh
- # create and copy ssh key to clipboard
+# create and copy ssh key to clipboard
 ssh-keygen -t ed25519 -C "85462046+javi-cardenas@users.noreply.github.com"
 pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
-## Setup
-Install just, clone the repo and run `just up`. Rerun `just up` after pulling changes or editing the Brewfile.
-
+### Setup
 ```sh
 brew install just
 git clone git@github.com:javi-cardenas/dotfiles.git
 cd dotfiles
-just up     # install the Brewfile and symlink dotfiles
-just macos  # apply macOS defaults
+just up
+just macos
 ```
 
-If a real file already sits where a dotfile symlink goes, `just up` adopts it into `stow/` and warns you. Review with `git diff -- stow`, then commit it or `git restore stow` to keep the repo version.
+Then work through the manual steps below.
 
-### macOS
-`just macos` applies the automated preferences but manual setup is still needed for:
+## Commands
+| Command | What it does |
+| --- | --- |
+| `just up` | Installs the Brewfile, symlinks every Stow package, links agent skills into Claude and reports Drift. Safe to rerun, so run it after every pull or Brewfile edit. |
+| `just macos` | Applies macOS defaults and turns on the firewall. Needs sudo and restarts Finder, Dock and Control Center. |
+| `just doctor` | Checks shellcheck, the Brewfile, Stow links and Drift without changing anything. |
+| `just prune` | Uninstalls Formulae, Casks and taps the Brewfile doesn't list. |
+| `just skills` | Updates Vendored skills. Review the diff before committing. |
 
-#### Raycast
-[Raycast](https://raycast.com/) is my Spotlight replacement; remap `cmd + space` and create hotkeys for window management.
+If a real file already sits where a symlink goes, `just up` adopts it into `stow/` and warns you. Review it with `git diff -- stow`, then commit it or `git restore stow` to keep the repo version.
 
-- Settings > Keyboard > Keyboard Shortcuts > Spotlight > Show Spotlight search > Off
-- Raycast > Settings > Extensions > Window Management
+## Manual steps
+These are the settings `just macos` can't set.
 
-#### Security
+### Raycast
+[Raycast](https://raycast.com/) replaces Spotlight. `just macos` frees up `cmd + space`.
+
+- Raycast > Settings > General > Raycast Hotkey > `cmd + space`
+- Raycast > Settings > Extensions > Window Management > set hotkeys
+- Raycast > Settings > Advanced > Import / Export to move settings between Macs
+
+### Security
 - General > Sharing > Local hostname > Edit
 - Notifications > Allow notifications when the screen is locked > Off
 - Privacy & Security > FileVault > On
 
-#### Battery
+### Battery
 - Charging > Charge Limit > 80%
 
-#### Storage
-- General > Storage > Empty Trash automatically > On
-
-#### Menu Bar
-- Clock > Display the time with seconds
-- Battery > Show percentage
-
-#### Screen Saver
-- Wallpaper > Screen Saver > Start Screen Saver > After 1 minute
-
-#### Keyboard
-- Key repeat rate > Fast
-- Delay until repeat > Short
+### Keyboard
 - Turn keyboard backlight off after inactivity > After 5 seconds
-
-#### Trackpad
-- Tap to click > On
-
-## Tools
-### Brewfile
-A [Brewfile](https://docs.brew.sh/Brew-Bundle-and-Brewfile) is a configuration file with all my Homebrew packages, `brew` installs CLI tools to `/opt/homebrew` and `cask` installs GUI applications to `/Applications`.
-
-### Just
-[Just](https://github.com/casey/just) is a task runner that simplifies running commands.
-
-### Stow
-[GNU Stow](https://www.gnu.org/software/stow/) creates symlinks from dotfiles in this repo to dotfiles in my home directory.
