@@ -9,7 +9,7 @@ for skill in "$HOME"/.agents/skills/*/; do
   ln -sfn "$skill" "$skills_dir/${skill##*/}"
 done
 
-# remove links to skills that no longer exist, leaving Claude's synced/ alone
+# remove links to skills that no longer exist
 for link in "$skills_dir"/*; do
   if [ -L "$link" ] && [ ! -e "$link" ]; then
     rm "$link"

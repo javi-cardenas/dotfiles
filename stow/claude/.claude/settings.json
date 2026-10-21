@@ -1,5 +1,5 @@
 {
-  "model": "opus",
+  "model": "opus[1m]",
   "statusLine": {
     "type": "command",
     "command": "jq -r '.context_window // {} | \"\\((.total_input_tokens // 0) / 1000 | . * 10 | round / 10)k (\\(.used_percentage // 0 | round)%)\"'"

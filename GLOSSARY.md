@@ -1,6 +1,6 @@
 # Dotfiles
 
-The declarative description of one personal Mac: what's installed, how it's configured, and what still has to be done by hand.
+The declarative description of what's installed, how it's configured, and what still has to be done by hand.
 
 ## Language
 

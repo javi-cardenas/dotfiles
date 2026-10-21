@@ -28,18 +28,6 @@ just new
 
 Then work through the manual steps below.
 
-## Commands
-| Command | What it does |
-| --- | --- |
-| `just new` | Runs `just up`, then `just macos`. Use it once on a new Mac. |
-| `just up` | Installs the Brewfile, symlinks every Stow package, links agent skills into Claude and reports tool drift. Safe to rerun, so run it after every pull or Brewfile edit. |
-| `just macos` | Needs sudo to apply macOS defaults. |
-| `just doctor` | Checks shellcheck, the Brewfile, Stow links and Drift without changing anything. |
-| `just prune` | Uninstalls Formulae, Casks and taps the Brewfile doesn't list. |
-| `just skills` | Updates Vendored skills. Review the diff before committing. |
-
-If a real file already sits where a symlink goes, `just up` adopts it into `stow/` and warns you. Review it with `git diff -- stow`, then commit it or `git restore stow` to keep the repo version.
-
 ## Manual steps
 These are the settings `just macos` can't set.
 

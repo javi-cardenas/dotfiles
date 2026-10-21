@@ -1,6 +1,6 @@
 # Vendor third-party skills
 
-Third-party agent skills (mattpocock/skills, vercel-labs/skills) are committed in full under `stow/agents/.agents/skills/`, not restored from `.skill-lock.json` at setup time. These files steer every agent on the Machine, so upstream changes should arrive as a git diff to review before they take effect, and setup shouldn't need the network or the `skills` CLI to work. The cost is that most tracked files are third-party and skill updates make large diffs.
+Third-party agent skills are committed in full under `stow/agents/.agents/skills/`, not restored from `.skill-lock.json` at setup time. These files steer every agent on the Machine, so upstream changes should arrive as a git diff to review before they take effect, and setup shouldn't need the network or the `skills` CLI to work. The cost is that most tracked files are third-party and skill updates make large diffs.
 
 ## Considered Options
 

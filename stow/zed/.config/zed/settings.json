@@ -6,6 +6,9 @@
   "ui_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "agent_buffer_font_size": 14.0,
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "favorite_models": [
       {
         "provider": "openai-subscribed",
@@ -22,13 +25,12 @@
     },
     "default_profile": "ask",
     "dock": "right",
-    "sidebar_side": "right",
   },
   "agent_servers": {
     "claude-acp": {
       "default_config_options": {
-        "fast": true,
-        "mode": "default"
+        "fast": false,
+        "mode": "acceptEdits"
       },
       "type": "registry"
     }

@@ -1,31 +1,33 @@
+# list just recipes
 default:
     @just --list
 
-# install the Brewfile and symlink every Stow package (safe to rerun)
-up:
-    brew bundle --verbose --file=Brewfile
-    mkdir -p "$HOME/.claude" # keep ~/.claude a real dir so Claude runtime state stays out of the repo
-    cd stow && stow --restow --adopt --target "$HOME" *
-    @./scripts/link-skills.sh
-    @git diff --quiet -- stow || echo "stow/ has uncommitted changes, stow --adopt may have pulled files in from $HOME: review with git diff -- stow"
-    @./scripts/drift.sh || true
+# mostly used by agents to run repo checks
+check:
+    @./scripts/check.sh
 
-# first run on a new Mac
-new: up macos
-
-# check the Machine matches the repo, changing nothing
-doctor:
-    @./scripts/doctor.sh
-
-# uninstall Formulae, Casks and taps not in the Brewfile
-prune:
-    brew bundle cleanup --force --file=Brewfile
-
-# apply macOS defaults (needs sudo)
+# apply macOS defaults
 macos:
     @./scripts/macos.sh
 
-# update Vendored skills, then review the diff before committing
+# use this on a new Mac
+new: up macos
+
+# uninstall tools not in the Brewfile
+prune:
+    brew bundle cleanup --force --file=Brewfile
+
+# short for update, use this after every pull to install the Brewfile and symlink the Stow packages
+up:
+    brew bundle --verbose --file=Brewfile
+    mkdir -p "$HOME/.claude" # makes a ~/.claude directory so Claude Code state stays out of the repo
+    mkdir -p "$HOME/.config/zed" # makes a ~/.config/zed directory so Zed state stays out of the repo
+    cd stow && stow --restow --adopt --target "$HOME" *
+    @./scripts/link-skills.sh
+    @git diff --quiet -- stow || echo "[WARNING] stow/ has uncommitted changes, stow --adopt may have pulled files in from $HOME: review with git diff -- stow"
+    @if output=$(./scripts/drift.sh); then echo "$output"; else echo "[WARNING] $output"; fi
+
+# update agent skills
 skills:
     bunx skills update --global --yes
     git status --short -- stow/agents
