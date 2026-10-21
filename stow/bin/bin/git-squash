@@ -10,7 +10,7 @@ base_branch="$1"
 current_branch=$(git symbolic-ref --short HEAD)
 
 if [ "$current_branch" = "$base_branch" ]; then
-  echo "Error: you are on '$base_branch', the same branch you tried to squash..." >&2
+  echo "[ERROR] you are on '$base_branch', the same branch you tried to squash..." >&2
   exit 1
 fi
 

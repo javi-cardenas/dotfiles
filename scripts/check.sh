@@ -12,11 +12,11 @@ check() {
   shift
   local output
   if output=$("$@" 2>&1); then
-    echo "ok    $name"
+    echo "[PASS] $name"
   else
-    echo "FAIL  $name"
+    echo "[FAIL] $name"
     while IFS= read -r line; do
-      echo "      $line"
+      echo "       $line"
     done <<<"$output"
     failed=1
   fi
@@ -33,14 +33,14 @@ stow_linked() {
     return 1
   }
   if grep '^LINK:' <<<"$output"; then
-    echo "missing links: run just up"
+    echo "Missing links, run just up"
     return 1
   fi
 }
 
-check "shellcheck" shellcheck scripts/*.sh stow/bin/bin/*
-check "Brewfile installed" brew bundle check --file=Brewfile
-check "Stow packages linked" stow_linked
-check "no Drift" ./scripts/drift.sh
+check "Scripts shellcheck..." shellcheck scripts/*.sh stow/bin/bin/*
+check "Brewfile installed..." brew bundle check --file=Brewfile
+check "Stow packages linked..." stow_linked
+check "No Brewfile drift..." ./scripts/drift.sh
 
 exit "$failed"

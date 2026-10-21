@@ -29,24 +29,24 @@ else
 fi
 
 if [ "$current_branch" = "$default_branch" ]; then
-  echo "Error: already on '$default_branch'..." >&2
+  echo "[ERROR] already on '$default_branch'..." >&2
   exit 1
 fi
 
 if [ -n "$(git status --porcelain)" ]; then
-  echo "Error: uncommitted changes, commit and push before running git done..." >&2
+  echo "[ERROR] uncommitted changes, commit and push before running git done..." >&2
   exit 1
 fi
 
 upstream=$(git rev-parse --abbrev-ref --symbolic-full-name '@{upstream}' 2>/dev/null || true)
 if [ -z "$upstream" ]; then
-  echo "Error: no upstream branch, push before running git done..." >&2
+  echo "[ERROR] no upstream branch, push before running git done..." >&2
   exit 1
 fi
 
 unpushed=$(git rev-list --count "$upstream..HEAD")
 if [ "$unpushed" -gt 0 ]; then
-  echo "Error: $unpushed unpushed commit(s), push before running git done..." >&2
+  echo "[ERROR] $unpushed unpushed commit(s), push before running git done..." >&2
   exit 1
 fi
 

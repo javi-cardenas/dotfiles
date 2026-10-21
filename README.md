@@ -1,5 +1,5 @@
 # Dotfiles
-My dotfiles for macOS. The repo describes one Mac, and anything installed or configured outside it is Drift. See [GLOSSARY.md](GLOSSARY.md) for the terms.
+My macOS dotfiles.
 
 ## New Mac
 ### Homebrew
@@ -23,22 +23,10 @@ pbcopy < ~/.ssh/id_ed25519.pub
 brew install just
 git clone git@github.com:javi-cardenas/dotfiles.git
 cd dotfiles
-just up
-just macos
+just new
 ```
 
 Then work through the manual steps below.
-
-## Commands
-| Command | What it does |
-| --- | --- |
-| `just up` | Installs the Brewfile, symlinks every Stow package, links agent skills into Claude and reports Drift. Safe to rerun, so run it after every pull or Brewfile edit. |
-| `just macos` | Applies macOS defaults and turns on the firewall. Needs sudo and restarts Finder, Dock and Control Center. |
-| `just doctor` | Checks shellcheck, the Brewfile, Stow links and Drift without changing anything. |
-| `just prune` | Uninstalls Formulae, Casks and taps the Brewfile doesn't list. |
-| `just skills` | Updates Vendored skills. Review the diff before committing. |
-
-If a real file already sits where a symlink goes, `just up` adopts it into `stow/` and warns you. Review it with `git diff -- stow`, then commit it or `git restore stow` to keep the repo version.
 
 ## Manual steps
 These are the settings `just macos` can't set.

@@ -6,6 +6,9 @@
   "ui_font_family": "JetBrainsMonoNL Nerd Font Mono",
   "agent_buffer_font_size": 14.0,
   "agent": {
+    "threads_sidebar": {
+      "position": "right"
+    },
     "favorite_models": [
       {
         "provider": "openai-subscribed",
@@ -22,20 +25,12 @@
     },
     "default_profile": "ask",
     "dock": "right",
-    "sidebar_side": "right",
   },
   "agent_servers": {
-    "cursor": {
+    "claude-acp": {
       "default_config_options": {
-        "mode": "ask",
-        "thinking": "true",
-        "model": "composer-2.5"
-      },
-      "favorite_config_option_values": {
-        "model": [
-          "composer-2.5",
-          "claude-fable-5-1"
-        ]
+        "fast": false,
+        "mode": "acceptEdits"
       },
       "type": "registry"
     }
