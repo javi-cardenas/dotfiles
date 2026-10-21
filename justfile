@@ -10,6 +10,9 @@ up:
     @git diff --quiet -- stow || echo "stow/ has uncommitted changes, stow --adopt may have pulled files in from $HOME: review with git diff -- stow"
     @./scripts/drift.sh || true
 
+# first run on a new Mac
+new: up macos
+
 # check the Machine matches the repo, changing nothing
 doctor:
     @./scripts/doctor.sh

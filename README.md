@@ -1,5 +1,5 @@
 # Dotfiles
-My dotfiles for macOS. The repo describes one Mac, and anything installed or configured outside it is Drift. See [GLOSSARY.md](GLOSSARY.md) for the terms.
+My macOS dotfiles.
 
 ## New Mac
 ### Homebrew
@@ -23,8 +23,7 @@ pbcopy < ~/.ssh/id_ed25519.pub
 brew install just
 git clone git@github.com:javi-cardenas/dotfiles.git
 cd dotfiles
-just up
-just macos
+just new
 ```
 
 Then work through the manual steps below.
@@ -32,8 +31,9 @@ Then work through the manual steps below.
 ## Commands
 | Command | What it does |
 | --- | --- |
-| `just up` | Installs the Brewfile, symlinks every Stow package, links agent skills into Claude and reports Drift. Safe to rerun, so run it after every pull or Brewfile edit. |
-| `just macos` | Applies macOS defaults and turns on the firewall. Needs sudo and restarts Finder, Dock and Control Center. |
+| `just new` | Runs `just up`, then `just macos`. Use it once on a new Mac. |
+| `just up` | Installs the Brewfile, symlinks every Stow package, links agent skills into Claude and reports tool drift. Safe to rerun, so run it after every pull or Brewfile edit. |
+| `just macos` | Needs sudo to apply macOS defaults. |
 | `just doctor` | Checks shellcheck, the Brewfile, Stow links and Drift without changing anything. |
 | `just prune` | Uninstalls Formulae, Casks and taps the Brewfile doesn't list. |
 | `just skills` | Updates Vendored skills. Review the diff before committing. |
