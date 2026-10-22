@@ -1,5 +1,21 @@
 tap "oven-sh/bun"
 
+brew "bun" # fast nodejs runtime
+brew "cloc" # lines of code
+brew "gh" # github cli
+brew "git" # version control
+brew "go" # go language
+brew "just" # shell script runner
+brew "proton-pass-cli" # password manager cli
+brew "shellcheck" # shell script linter
+brew "starship" # custom shell prompt
+brew "stow" # dotfiles manager
+brew "uv" # python package manager
+brew "zsh-autosuggestions" # shell autosuggestions
+brew "zsh-completions" # shell autocomplete
+brew "zsh-history-substring-search" # shell history search
+brew "zsh-syntax-highlighting" # shell command highlights
+
 cask "beekeeper-studio" # sql editor
 cask "brave-browser" # chrome-based browser
 cask "bruno" # api client
@@ -21,19 +37,3 @@ cask "t3-code" # ai code editor
 cask "tailscale-app" # private networking
 cask "zed" # code editor
 cask "zen" # firefox based for demos
-
-brew "bun" # fast nodejs runtime
-brew "cloc" # lines of code
-brew "gh" # github cli
-brew "git" # version control
-brew "go" # go language
-brew "just" # shell script runner
-brew "proton-pass-cli" # password manager cli
-brew "shellcheck" # shell script linter
-brew "starship" # custom shell prompt
-brew "stow" # dotfiles manager
-brew "uv" # python package manager
-brew "zsh-autosuggestions" # shell autosuggestions
-brew "zsh-completions" # shell autocomplete
-brew "zsh-history-substring-search" # shell history search
-brew "zsh-syntax-highlighting" # shell command highlights
