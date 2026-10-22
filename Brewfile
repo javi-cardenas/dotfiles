@@ -18,6 +18,7 @@ cask "shottr" # screenshot editor
 cask "spotify" # music player
 cask "steam" # gaming
 cask "t3-code" # ai code editor
+cask "tailscale-app" # private networking
 cask "zed" # code editor
 cask "zen" # firefox based for demos
 
