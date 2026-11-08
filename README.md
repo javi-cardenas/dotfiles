@@ -20,10 +20,11 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 ### Setup
 ```sh
+mkdir Developer
 brew install just
 git clone git@github.com:javi-cardenas/dotfiles.git
 cd dotfiles
-just new
+just new # runs just up and just macos
 ```
 
 Then work through the manual steps below.
@@ -32,11 +33,9 @@ Then work through the manual steps below.
 These are the settings `just macos` can't set.
 
 ### Raycast
-[Raycast](https://raycast.com/) replaces Spotlight. `just macos` frees up `cmd + space`.
-
-- Raycast > Settings > General > Raycast Hotkey > `cmd + space`
-- Raycast > Settings > Extensions > Window Management > set hotkeys
-- Raycast > Settings > Advanced > Import / Export to move settings between Macs
+[Raycast](https://raycast.com/) replaces Spotlight.
+- Raycast > General > Raycast Hotkey > `cmd + space`
+- Raycast > Shortcuts > Extensions > Window Management > set hotkeys
 
 ### Security
 - General > Sharing > Local hostname > Edit
