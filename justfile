@@ -21,6 +21,10 @@ new: up macos
 prune:
     brew bundle cleanup --force --file=Brewfile
 
+# remove the Stow links, skill links and launchd agents, shows the plan and asks first, flags: --dry-run --yes --keep-copies --macos --brew (see scripts/uninstall.sh --help)
+uninstall *args:
+    @./scripts/uninstall.sh {{args}}
+
 # short for update, use this after every pull to install the Brewfile and symlink the Stow packages
 up:
     brew bundle --verbose --file=Brewfile

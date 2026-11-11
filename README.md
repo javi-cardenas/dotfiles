@@ -28,6 +28,23 @@ just new
 
 Then work through the manual steps below.
 
+## Uninstall
+```sh
+just uninstall --dry-run   # print the plan, change nothing
+just uninstall             # print the plan, then ask before applying it
+```
+
+Removes the Stow links, the skill links in `~/.claude/skills`, and the launchd agents with their log. It never deletes real files, only links into this repo, so it also cleans up links left dangling after the repo moved.
+
+| Flag | Does |
+| --- | --- |
+| `--keep-copies` | replaces each Stow link with a real copy, so `~/.zshrc`, `~/.gitconfig` and the rest keep working |
+| `--macos` | resets the defaults `just macos` wrote, the firewall stays on |
+| `--brew` | uninstalls every Formula, Cask and tap in the Brewfile |
+| `--yes` | skips the confirmation |
+
+The repo, Homebrew itself and `~/.zprofile` stay, delete them by hand if you want a full wipe. Keep `--macos` in sync with `scripts/macos.sh` when adding a default.
+
 ## Manual steps
 These are the settings `just macos` can't set.
 

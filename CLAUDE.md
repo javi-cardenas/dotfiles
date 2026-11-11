@@ -14,4 +14,4 @@ Single-context: one `GLOSSARY.md` and `docs/adr/` at the repo root. See `docs/ag
 
 ## Verifying changes
 
-Run `just check` after any change. It checks shellcheck, the Brewfile, Stow links and Drift, and changes nothing. `just macos`, `just prune`, and `just up` change the Machine, so ask before running them.
+Run `just check` after any change. It checks shellcheck, the Brewfile, Stow links and Drift, and changes nothing. `just macos`, `just prune`, `just up`, and `just uninstall` (anything but `--dry-run`) change the Machine, so ask before running them.
