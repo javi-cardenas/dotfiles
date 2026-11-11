@@ -10,6 +10,10 @@ check:
 macos:
     @./scripts/macos.sh
 
+# keep a desktop Mac awake, refuses to run on a Mac with a battery
+always-on:
+    @./scripts/always-on.sh
+
 # use this on a new Mac
 new: up macos
 
