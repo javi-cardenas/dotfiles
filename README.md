@@ -43,6 +43,11 @@ These are the settings `just macos` can't set.
 - Notifications > Allow notifications when the screen is locked > Off
 - Privacy & Security > FileVault > On
 
+### Remote access
+For a Mac mini used as a server, after `just always-on`.
+- General > Sharing > Remote Login > On
+- General > Sharing > Screen Sharing > On
+
 ### Battery
 - Charging > Charge Limit > 80%
 
