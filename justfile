@@ -31,6 +31,10 @@ up:
     @git diff --quiet -- stow || echo "[WARNING] stow/ has uncommitted changes, stow --adopt may have pulled files in from $HOME: review with git diff -- stow"
     @if output=$(./scripts/drift.sh); then echo "$output"; else echo "[WARNING] $output"; fi
 
+# install the launchd agents that update Homebrew: vulnerable Formulae daily, everything Thursday, log is ~/Library/Logs/brew-update.log
+launchd:
+    @./scripts/launchd.sh
+
 # update agent skills
 skills:
     bunx skills update --global --yes
