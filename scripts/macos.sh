@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# every default written here needs a matching reset in scripts/uninstall.sh
+
 sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on # turn on the firewall
 
 chflags nohidden "$HOME/Library" # show ~/Library in Finder
