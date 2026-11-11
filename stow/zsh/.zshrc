@@ -40,10 +40,10 @@ alias reload="source ~/.zshrc"
 alias z="zed"
 alias loc="cloc . --vcs=git"
 
-alias boot="cd ~/repos/javi-cardenas/bootdotdev"
-alias dotfiles="cd ~/repos/javi-cardenas/dotfiles"
-alias dice="cd ~/repos/javi-cardenas/liars-dice"
-alias javi="cd ~/repos/javi-cardenas"
+alias boot="cd ~/Developer/javi-cardenas/bootdotdev"
+alias dotfiles="cd ~/Developer/javi-cardenas/dotfiles"
+alias dice="cd ~/Developer/javi-cardenas/liars-dice"
+alias javi="cd ~/Developer/javi-cardenas"
 alias notes="cd ~/Documents/obsidian"
 alias proton="cd ~/Library/CloudStorage/ProtonDrive-javicardenas@pm.me-folder"
 
@@ -52,4 +52,5 @@ alias unlock="pass session unlock"
 
 # github
 alias ghpr="gh pr create --fill-first"
+alias ghjavi="open https://github.com/javi-cardenas?tab=repositories"
 # --- ALIASES ---
