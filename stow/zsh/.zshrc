@@ -50,6 +50,8 @@ alias proton="cd ~/Library/CloudStorage/ProtonDrive-javicardenas@pm.me-folder"
 alias pass="pass-cli"
 alias unlock="pass session unlock"
 
+alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 # github
 alias ghpr="gh pr create --fill-first"
 alias ghjavi="open https://github.com/javi-cardenas?tab=repositories"
