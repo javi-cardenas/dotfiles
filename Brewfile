@@ -27,6 +27,7 @@ cask "linear" # issue tracker
 cask "obsidian" # notes app
 cask "proton-drive" # cloud storage
 cask "proton-mail" # email client
+cask "proton-mail-bridge" # imap/smtp bridge for proton mail
 cask "proton-pass" # password manager
 cask "protonvpn" # vpn
 cask "raycast" # spotlight replacement
