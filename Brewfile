@@ -20,6 +20,7 @@ cask "beekeeper-studio" # sql editor
 cask "brave-browser" # chrome-based browser
 cask "bruno" # api client
 cask "claude-code" # claude agent
+cask "cursor-cli" # cursor agent
 cask "discord" # gaming & dev chats
 cask "font-jetbrains-mono-nerd-font" # jetbrains nerd font
 cask "ghostty" # terminal emulator
