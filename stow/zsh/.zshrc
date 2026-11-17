@@ -54,3 +54,8 @@ alias unlock="pass session unlock"
 alias ghpr="gh pr create --fill-first"
 alias ghjavi="open https://github.com/javi-cardenas?tab=repositories"
 # --- ALIASES ---
+
+# --- TMUX ---
+# keep last, it hands an SSH login over to tmux
+source "$HOME/.config/tmux/ssh-attach.zsh"
+# --- TMUX ---

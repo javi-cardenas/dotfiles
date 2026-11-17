@@ -65,6 +65,16 @@ For a Mac mini used as a server, after `just always-on`.
 - General > Sharing > Remote Login > On
 - General > Sharing > Screen Sharing > On
 
+An SSH login drops into a tmux session named `main`, so `ssh` again after a disconnect and everything is where you left it. `prefix + d` detaches and ends the SSH session, `prefix + b` opens btop to see what the agents are using, and `ssh -t <host> zsh` skips tmux. The `.zshrc` sources `~/.config/tmux/ssh-attach.zsh` from the `tmux` Stow package.
+
+On a mini where agents run as a standard user, Homebrew belongs to the admin account, so install `tmux`, `btop` and `cmux` there with `brew install tmux btop && brew install --cask cmux`. Then as the standard user, link the config and source it from that user's `.zshrc`:
+
+```sh
+mkdir -p ~/.config
+ln -s ~/Developer/javi-cardenas/dotfiles/stow/tmux/.config/tmux ~/.config/tmux
+echo 'source "$HOME/.config/tmux/ssh-attach.zsh"' >> ~/.zshrc
+```
+
 ### Battery
 - Charging > Charge Limit > 80%
 

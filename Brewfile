@@ -1,5 +1,6 @@
 tap "oven-sh/bun"
 
+brew "btop" # resource monitor
 brew "bun" # fast nodejs runtime
 brew "cloc" # lines of code
 brew "gh" # github cli
@@ -10,6 +11,7 @@ brew "proton-pass-cli" # password manager cli
 brew "shellcheck" # shell script linter
 brew "starship" # custom shell prompt
 brew "stow" # dotfiles manager
+brew "tmux" # terminal sessions that survive ssh disconnects
 brew "uv" # python package manager
 brew "zsh-autosuggestions" # shell autosuggestions
 brew "zsh-completions" # shell autocomplete
@@ -20,6 +22,7 @@ cask "beekeeper-studio" # sql editor
 cask "brave-browser" # chrome-based browser
 cask "bruno" # api client
 cask "claude-code" # claude agent
+cask "cmux" # terminal for coding agents
 cask "discord" # gaming & dev chats
 cask "font-jetbrains-mono-nerd-font" # jetbrains nerd font
 cask "ghostty" # terminal emulator
